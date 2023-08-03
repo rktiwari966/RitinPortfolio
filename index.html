@@ -40,7 +40,18 @@
         letter-spacing: 3px;
         text-transform: capitalize;
       }
-
+      @keyframes object1 {
+        50% {
+          left: -13%;
+          top: 41%;
+        }
+      }
+      @keyframes object2 {
+        50% {
+          left: 35%;
+          top: 10%;
+        }
+      }
       .navitems li a:hover {
         color: #7f00ff;
       }
@@ -87,7 +98,7 @@
         width: 329px;
         border-radius: 83%;
         left: -121px;
-        top: 41%;
+        top: 42%;
         background: linear-gradient(45deg, #7f00ff, pink);
         animation: object1 6s linear infinite;
       }
@@ -114,6 +125,16 @@
         font: 1em;
       }
 }
+.wrapper::after {
+        position: absolute;
+        content: "";
+        height: 146px;
+        width: 146px;
+        border-radius: 83%;
+        left: 356px;
+        top: 14%;
+        background: linear-gradient(45deg, #7f00ff, pink);
+      }
 
 .btns {
         width: 100%;
@@ -182,6 +203,11 @@ right: 0px;
     transform: rotateY(180deg);
 
       }
+
+    .links a {
+      z-index: 5;
+      position: relative;
+    }
     </style>
     <link
     rel="stylesheet"
@@ -224,20 +250,21 @@ right: 0px;
       </nav>
       <div class="container-fluid">
         <div class="wrapper">
-            <div class="col-0">
-              <span class="topline">Hello</span>
+            <div class="col-0 col-md-9">
+              <span class="topline">Hii</span>
               <h1>I'm</h1>
               <h1><span class="multiText fw-bold"></span></h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, vel!
-                Lorem ipsum dolor sit perspiciatis asperiores?
+              <p class="text-justify">
+                Hello and welcome to my portfolio! My name is Ritin Tiwari, and I am a computer science engineer from Jabalpur. I completed my engineering degree From Shri Ram Institute of Science and Technology in Computer Science. During my academic journey, I have acquired a diverse skill set in various technologies.</p>
+<p class="text-justify">
+                One of the key highlights of my career is my internship experience at Wooshelf Pvt Ltd, where I served as a React Developer Intern. During this time, I had the opportunity to work with HTML, CSS, and Bootstrap, honing my skills in front-end web development. Additionally, I gained expertise in ReactJS, a popular JavaScript library for building user interfaces.
               </p>
-              <div class="btns">
+              <div class="btns mt-4">
                 <button class="rounded-2 px-3 mx-1"><a class="text-decoration-none text-light" href="https://drive.google.com/uc?export&id=1i3Q7eiEB1xLZmQxEz2xzxLIA1evCFS58" download>Download CV</a></button>
                 <button class="rounded-2 px-3 mx-1">Hire Me</button>
               </div>
             </div>
-            <div class="col-1 d-none d-md-block">
+            <div class="col-1 col-md-3 d-none d-md-block">
               <div class="imgbox">
                 <img src="Img1.png" id="splash" alt="" />
                 <img src="" alt="" />
@@ -251,7 +278,7 @@ right: 0px;
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script>
   var TypingEffect = new Typed(".multiText", {
-    strings: [" coder ", "web-developer"],
+    strings: ["Ritin Tiwari"," coder ", "web-developer"],
     loop: true,
     typeSpeed: 100,
     backSpeed: 80,
