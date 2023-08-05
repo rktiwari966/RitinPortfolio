@@ -24,68 +24,59 @@
                 <div class="col-8">
                     <div class="card mb-3 px-4 py-2">
                         <div class="card-body">
-                            <h4 class="card-title text-center py-4 fw-bold">
-                                Please Share Your Info
-                            </h4>
-                            <input
-                                class="form-control form-control mb-3 py-2"
-                                id="Name"
-                                type="text"
-                                placeholder="Enter Your Name"
-                                aria-label=".form-control example" />
-                            <input
-                                class="form-control form-control mb-3 py-2"
-                                id="Email"
-                                type="email"
-                                placeholder="Enter Your Email"
-                                aria-label=".form-control example" />
-                            <input
-                                class="form-control form-control mb-3 py-2"
-                                id="Subject"
-                                type="text"
-                                placeholder="Enter Subject"
-                                aria-label=".form-control example" />
-                            <div class="mb-3">
-                                <textarea class="form-control" id="Message"
-                                    rows="3" placeholder="Enter Message Here"></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn btn-primary px-4">Send
-                                    Message</button>
-                            </div>
+                            <form onsubmit="sendmail(); reset(); return false;">
+                                <h4 class="card-title text-center py-4 fw-bold">
+                                    Please Share Your Info
+                                </h4>
+                                <input
+                                    class="form-control form-control mb-3 py-2"
+                                    id="Name"
+                                    type="text"
+                                    placeholder="Enter Your Name"
+                                    aria-label=".form-control example" />
+                                <input
+                                    class="form-control form-control mb-3 py-2"
+                                    id="Email"
+                                    type="email"
+                                    placeholder="Enter Your Email"
+                                    aria-label=".form-control example" />
+                                <input
+                                    class="form-control form-control mb-3 py-2"
+                                    id="Subject"
+                                    type="text"
+                                    placeholder="Enter Subject"
+                                    aria-label=".form-control example" />
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="Message"
+                                        rows="3" placeholder="Enter Message Here"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-primary px-4">Send
+                                        Message</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <section></section>
                 </div>
             </div>
         </div>
-        <!-- <section class="contact-container mb-3">
-            <div class="row mx-4">
-                <div class="col-md-4">
-                    <div class="">
-                        <i class="bi bi-envelope-at-fill fs-1 text-primary"></i>
-                    </div>
-                    <div class="fs-5">
-                        <span>
-                            <b>Email-1: </b><a href="mailto:tiwariritin469@gmail.com">tiwariritin469@gmail.com</a>
-                        </span>
-                    </div>
-                    <div class="fs-5">
-                        <span>
-                            <b>Email-2: </b><a href="mailto:ritin966@gmail.com">ritin966@gmail.com</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <i class="bi bi-telephone-fill fs-1 text-primary"></i>
-                    <div class="fs-5">
-                        <span>
-                            <b>Phone-No: </b><a href="tel:+916267017439">6267017439</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-4"></div>
-            </div>
-        </section> -->
+        <script>
+            function sendmail() {
+              Email.send({
+                Host: "smtp.gmail.com",
+                Username: "tiwariritin469@gmail.com",
+                Password: "Labx3365@1",
+                To: 'ritinportfolio469@gmail.com',
+                From: document.getElementById('Email').value,
+                Name: document.getElementById('Name').value,
+                Subject: document.getElementById('Subject').value,
+                Body: "And this is the body"
+              }).then(
+                message => alert(message)
+              );
+            }
+          </script> 
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
     </body>
 </html>
