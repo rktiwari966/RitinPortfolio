@@ -21,7 +21,7 @@
         </div>
         <div class="container">
             <div class="d-flex justify-content-center">
-                <div class="col-8">
+                <div class="col-md-8">
                     <div class="card mb-3 px-4 py-2">
                         <div class="card-body">
                             <form
@@ -72,22 +72,5 @@
                 </div>
             </div>
         </div>
-        <script>
-            function sendmail() {
-              Email.send({
-                Host: "smtp.gmail.com",
-                Username: "tiwariritin469@gmail.com",
-                Password: "Labx3365@1",
-                To: 'ritinportfolio469@gmail.com',
-                From: document.getElementById('Email').value,
-                Name: "test",
-                Subject: "test",
-                Body: "And this is the body"
-              }).then(
-                message => alert(message)
-              );
-            }
-          </script>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
     </body>
 </html>
